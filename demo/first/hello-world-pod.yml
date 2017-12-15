@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: node-hello-world-pod
+  labels:
+    app: hello-world
+spec:
+  containers:
+  - name: java-app
+    image: aminmithil/java-rest-demo
+    ports:
+    - containerPort: 8080

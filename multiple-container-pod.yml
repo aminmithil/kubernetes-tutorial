@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: node-mysql-load
+  labels:
+    app: nodewithmysqlload
+spec:
+  containers:
+  - name: node-hello
+    image: aminmithil/node-demo
+    ports:
+    - containerPort: 8081
+  - name: mysql-container
+    image: mysql
+    ports:
+    - containerPort: 3306
+    env:
+    - name: "MYSQL_ROOT_PASSWORD"
+      value: "#Divya1994"
